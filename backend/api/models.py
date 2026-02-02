@@ -1,7 +1,6 @@
 from django.db import models
 
 class Employee(models.Model):
-    # ⚠️ FIX: primary_key=True means this IS the ID. No hidden IDs anymore.
     employee_id = models.CharField(max_length=50, primary_key=True) 
     full_name = models.CharField(max_length=100)
     email = models.EmailField()

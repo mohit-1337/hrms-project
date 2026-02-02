@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// ⚠️ IMPORTANT: This points to your Django Backend
+
 const API_URL = "https://hrms-project-j9ox.onrender.com/api";
 
 function App() {
@@ -39,7 +39,6 @@ function App() {
     setLoading(false);
   };
 
-  // ⚠️ UPDATED: Accepts 'employee_id' (e.g. "101") instead of internal ID
   const handleDelete = async (empId) => {
     if (!empId) {
       alert("Error: Employee ID is missing!");
@@ -59,7 +58,7 @@ function App() {
     }
   };
 
-  // ⚠️ UPDATED: Accepts 'employee_id' (e.g. "101")
+ 
   const markAttendance = async (empId, status) => {
     const date = new Date().toISOString().split('T')[0]; // Today's date YYYY-MM-DD
     
@@ -117,7 +116,7 @@ function App() {
                 </thead>
                 <tbody>
                   {employees.map(emp => (
-                    // ⚠️ CRITICAL CHANGE: Using employee_id as key
+                    
                     <tr key={emp.employee_id} className="border-b hover:bg-gray-50">
                       <td className="p-3 font-mono text-sm">{emp.employee_id}</td>
                       <td className="p-3 font-medium">{emp.full_name}</td>

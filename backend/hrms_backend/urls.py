@@ -9,6 +9,5 @@ router.register(r'attendance', AttendanceViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # This line was missing! It tells Django where to find your API
     path('api/', include(router.urls)), 
 ]
