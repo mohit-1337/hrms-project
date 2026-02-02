@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ⚠️ IMPORTANT: This points to your Django Backend
-const API_URL = "http://127.0.0.1:8000/api";
+const API_URL = "https://hrms-project-j9ox.onrender.com/api";
 
 function App() {
   const [employees, setEmployees] = useState([]);
