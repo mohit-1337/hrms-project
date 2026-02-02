@@ -23,10 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yyczcgmi@@*_3z*md17w!+)z*#q7f599-yl*j$0i-x#im0b6w-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://hrms-project-j9ox.onrender.com/api',
+    'hrms-project-j9ox.onrender.com', # Your Render URL
+    '127.0.0.1',                      # Your Local IP
+    'localhost',                      # Your Local Name
 ]
 
 
@@ -142,5 +144,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Allow React (running on port 5173) to talk to Django
-CORS_ALLOW_ALL_ORIGINS = True  # For simple testing
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hrms-project-murex.vercel.app",
+]
+
 CORS_ALLOW_CREDENTIALS = True
+
