@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yyczcgmi@@*_3z*md17w!+)z*#q7f599-yl*j$0i-x#im0b6w-
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'hrms-project-j9ox.onrender.com',
+    'https://hrms-project-j9ox.onrender.com/api',
 ]
 
 
