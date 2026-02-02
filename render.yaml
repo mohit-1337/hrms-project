@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hrms-backend
+    env: python
+    region: oregon
+    branch: main
+    buildCommand: >-
+      pip install -r backend/requirements.txt && 
+      python backend/manage.py migrate --noinput && 
+      python backend/manage.py collectstatic --noinput
+    startCommand: >-
+      gunicorn hrms_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 3
+    env:
+      DJANGO_SETTINGS_MODULE: hrms_backend.settings
+      DEBUG: 'False'
